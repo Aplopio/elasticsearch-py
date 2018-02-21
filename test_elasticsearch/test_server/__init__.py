@@ -1,4 +1,4 @@
-from elasticsearch.helpers.test import get_test_client, ElasticsearchTestCase as BaseTestCase
+from elasticsearch_old.helpers.test import get_test_client, ElasticsearchTestCase as BaseTestCase
 
 client = None
 

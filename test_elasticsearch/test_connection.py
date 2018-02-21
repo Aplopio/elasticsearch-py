@@ -3,8 +3,8 @@ from mock import Mock, patch
 import urllib3
 import warnings
 
-from elasticsearch.exceptions import TransportError, ConflictError, RequestError, NotFoundError
-from elasticsearch.connection import RequestsHttpConnection, \
+from elasticsearch_old.exceptions import TransportError, ConflictError, RequestError, NotFoundError
+from elasticsearch_old.connection import RequestsHttpConnection, \
     Urllib3HttpConnection, THRIFT_AVAILABLE, ThriftConnection
 
 from .test_cases import TestCase, SkipTest

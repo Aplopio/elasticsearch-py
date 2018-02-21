@@ -8,9 +8,9 @@ from os import walk, environ
 from os.path import exists, join, dirname, pardir
 import yaml
 
-from elasticsearch import TransportError
-from elasticsearch.compat import string_types
-from elasticsearch.helpers.test import _get_version
+from elasticsearch_old import TransportError
+from elasticsearch_old.compat import string_types
+from elasticsearch_old.helpers.test import _get_version
 
 from ..test_cases import SkipTest
 from . import ElasticsearchTestCase

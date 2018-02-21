@@ -4,8 +4,8 @@ import sys
 from datetime import datetime
 from decimal import Decimal
 
-from elasticsearch.serializer import JSONSerializer, Deserializer, DEFAULT_SERIALIZERS, TextSerializer
-from elasticsearch.exceptions import SerializationError, ImproperlyConfigured
+from elasticsearch_old.serializer import JSONSerializer, Deserializer, DEFAULT_SERIALIZERS, TextSerializer
+from elasticsearch_old.exceptions import SerializationError, ImproperlyConfigured
 
 from .test_cases import TestCase, SkipTest
 

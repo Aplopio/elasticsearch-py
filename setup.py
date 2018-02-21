@@ -35,7 +35,7 @@ if sys.version_info[0] == 2:
     tests_require.append('pylibmc==1.2.3')
 
 setup(
-    name = 'elasticsearch',
+    name = 'elasticsearch_old',
     description = "Python client for Elasticsearch",
     license="Apache License, Version 2.0",
     url = "https://github.com/elasticsearch/elasticsearch-py",

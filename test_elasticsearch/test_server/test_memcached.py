@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from elasticsearch import Elasticsearch, MemcachedConnection, NotFoundError
-from elasticsearch.transport import ADDRESS_RE
+from elasticsearch_old import Elasticsearch, MemcachedConnection, NotFoundError
+from elasticsearch_old.transport import ADDRESS_RE
 
 from . import ElasticsearchTestCase
 from ..test_cases import SkipTest
