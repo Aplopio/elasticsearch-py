@@ -2,6 +2,7 @@
 from __future__ import print_function
 
 import sys
+import atexit
 from os import environ
 from os.path import dirname, join, pardir, abspath, exists
 import subprocess
@@ -50,7 +51,7 @@ def fetch_es_repo():
     subprocess.check_call('cd %s && git reset --hard %s' % (repo_path, sha), shell=True)
 
 def run_all(argv=None):
-    sys.exitfunc = lambda: sys.stderr.write('Shutting down....\n')
+    atexit.register(lambda: sys.stderr.write('Shutting down....\n'))
 
     # fetch yaml tests
     fetch_es_repo()
