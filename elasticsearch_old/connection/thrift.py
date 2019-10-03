@@ -1,4 +1,5 @@
 from __future__ import absolute_import
+from builtins import str
 from socket import timeout as SocketTimeout
 import time
 import logging
@@ -93,6 +94,6 @@ class ThriftConnection(PoolingConnection):
 
         headers = {}
         if response.headers:
-            headers = dict((k.lower(), v) for k, v in response.headers.items())
+            headers = dict((k.lower(), v) for k, v in list(response.headers.items()))
         return response.status, headers, response.body or ''
 

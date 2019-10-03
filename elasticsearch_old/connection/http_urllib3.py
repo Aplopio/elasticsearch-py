@@ -1,3 +1,4 @@
+from builtins import str
 import time
 import urllib3
 from urllib3.exceptions import ReadTimeoutError, SSLError as UrllibSSLError

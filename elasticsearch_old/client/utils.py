@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 
+from builtins import str
+from builtins import object
 from datetime import date, datetime
 from functools import wraps
 from ..compat import string_types, quote_plus

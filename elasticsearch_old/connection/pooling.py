@@ -1,7 +1,9 @@
+from future import standard_library
+standard_library.install_aliases()
 try:
     import queue
 except ImportError:
-    import Queue as queue
+    import queue as queue
 from .base import Connection
 
 

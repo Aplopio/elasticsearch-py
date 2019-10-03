@@ -1,3 +1,7 @@
+from builtins import zip
+from builtins import map
+from builtins import range
+from builtins import object
 import re
 import time
 from itertools import chain
@@ -166,7 +170,7 @@ class Transport(object):
                         host['scheme'], self.connection_class.__name__, self.connection_class.transport_schema
                 ))
             return self.connection_class(**kwargs)
-        connections = map(_create_connection, hosts)
+        connections = list(map(_create_connection, hosts))
 
         connections = list(zip(connections, hosts))
         if len(connections) == 1:
@@ -219,7 +223,7 @@ class Transport(object):
 
         hosts = []
         address = self.connection_class.transport_schema + '_address'
-        for n in node_info['nodes'].values():
+        for n in list(node_info['nodes'].values()):
             match = ADDRESS_RE.search(n.get(address, ''))
             if not match:
                 continue

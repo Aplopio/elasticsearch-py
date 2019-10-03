@@ -1,3 +1,5 @@
+from builtins import map
+from builtins import str
 from itertools import islice
 from operator import methodcaller
 
@@ -88,7 +90,7 @@ def streaming_bulk(client, actions, chunk_size=500, raise_on_error=False,
         should return a tuple containing the action line and the data line
         (`None` if data line should be omitted).
     """
-    actions = map(expand_action_callback, actions)
+    actions = list(map(expand_action_callback, actions))
 
     # if raise on error is set, we need to collect errors per chunk before raising them
     errors = []

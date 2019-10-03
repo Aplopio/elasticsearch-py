@@ -1,9 +1,12 @@
+from future import standard_library
+standard_library.install_aliases()
+from builtins import object
 import time
 import random
 import logging
 
 try:
-    from Queue import PriorityQueue, Empty
+    from queue import PriorityQueue, Empty
 except ImportError:
     from queue import PriorityQueue, Empty
 

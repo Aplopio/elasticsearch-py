@@ -1,3 +1,4 @@
+from builtins import str
 import time
 try:
     import simplejson as json
